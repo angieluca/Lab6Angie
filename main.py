@@ -1,6 +1,6 @@
 def encoder(password):
     pass_list = []
-    # change each string character to int, then back to str, append to list
+    # change the string characters to int, add 3, change back to str, append to list
     for i in password:
         pass_list.append(str(int(i) + 3))
     # change list to string without whitespace
