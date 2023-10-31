@@ -8,6 +8,17 @@ def encoder(password):
     return pass_string
 
 
+def decode(password):
+    dec_pass = ""
+    for dig in password:
+        # if the integer is less than 3, the encoded number will be the same as adding 7
+        if int(dig) < 3:
+            dec_pass += str(int(dig) + 7)
+        else:
+            dec_pass += str(int(dig) - 3)
+    print(f"The encoded password is {password}, and the original password is {dec_pass}.")
+
+
 def main():
     stay = True
     new_pw = ""
@@ -24,6 +35,8 @@ def main():
             user_pw = str(input("Please enter your password to encode: "))
             new_pw = encoder(user_pw)  # this is the input for the decoder function
             print("Your password has been encoded and stored!")
+        elif user_choice == 2:
+            decode(new_pw)
         else:
             print("Invalid input.")
 
