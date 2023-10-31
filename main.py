@@ -1,3 +1,4 @@
+# Angela Luca
 def encoder(password):
     pass_list = []
     # change the string characters to int, add 3, change back to str, append to list
